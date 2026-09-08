@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -38,11 +38,10 @@ model Contact {
   id        String   @id @default(cuid())
   name      String
   role      String
-  email     String?
-  phone     String?
-  dept      String?
-  imageUrl  String?
   order     Int      @default(0)
+  imageUrl  String?
+  email     String?
+  linkedin  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -51,6 +50,5 @@ model Admin {
   id           String   @id @default(cuid())
   email        String   @unique
   passwordHash String
-  name         String?
   createdAt    DateTime @default(now())
 }
