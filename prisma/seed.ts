@@ -16,7 +16,6 @@ async function main() {
       data: {
         email: adminEmail,
         passwordHash,
-        name: 'Yeshwanth Reddy P G',
       },
     });
     console.log(`✅ Seeded Admin User: ${adminEmail} (password: Admin@IEEE2026)`);
