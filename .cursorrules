@@ -1,0 +1,24 @@
+You are working on the IEEE CMRU website (IEEE-CMRU-Website repo, ieee-cmru-website project), a Next.js App Router + TypeScript project.
+
+STACK (do not deviate without asking):
+- Next.js App Router, TypeScript
+- Prisma ORM (never write raw SQL)
+- NextAuth.js for admin auth (never hand-roll auth/session/password hashing)
+- Zod for validation, always on both client AND server
+- Tailwind CSS for styling
+- Deployed on Vercel
+
+RULES:
+- Never commit secrets. .env must stay in .gitignore. Always use process.env references.
+- All /admin/* routes must be protected server-side (middleware or session check in the route/page itself), never just hidden in the UI.
+- All API routes that accept user input must validate with Zod server-side, even if client-side validation exists.
+- Do not introduce a second backend or hosting target. Everything lives in this one Next.js project on Vercel.
+- Keep changes scoped to the specific file(s) or feature I ask about. Do not refactor unrelated files unless asked.
+- When editing, prefer minimal, targeted diffs over rewriting whole files.
+- There is a separate "frontend" repo (the old static HTML proposal version) that is archived and read-only — never modify it, only reference content/images copied from it when I paste them in.
+
+GIT WORKFLOW (mandatory):
+- After completing any task and I confirm it looks correct, stage, commit, and push the changes yourself to the IEEE-CMRU-Website repo using a clear conventional-commit-style message (feat:, fix:, chore:, etc.) describing what changed.
+- NEVER commit or push without my explicit confirmation first. Always show me the diff/summary of what changed and wait for me to say "confirmed" or "commit it" before running git commands.
+- Use small, single-purpose commits — one feature or fix per commit, not batched unrelated changes.
+- After pushing, tell me the commit message used and confirm the push succeeded.
